@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+<html>
+	<head>
+	{% block head %}
+		<title>My Badges</title>
+		<link href="/static/custom.css" rel="stylesheet">
+	{% endblock %}
+	</head>
+	
+	{% block body %}
+	<body style="min-height:100vh">		
+		<div class="d-sm-flex flex-column", style="min-height:100vh">
+			{% for badge in badges %}
+			<div class="card front-page">
+				<div class="container" style="text-align:center;">
+					{% if badge.award_category == 0 %}
+					<img src="/static/bronze.png" alt="Bronze Award" style="margin-left: auto; margin-right: auto; height:80%">
+					{% elif badge.award_category == 1 %}
+					<img src="/static/silver.png" alt="Silver Award" style="margin-left: auto; margin-right: auto; height:80%">
+					{% elif badge.award_category == 2 %}
+					<img src="/static/gold.png" alt="Gold Award" style="margin-left: auto; margin-right: auto; height:80%">
+					{% endif %}
+					<h4>{{badge.award_text}}</h4>
+				</div>
+			</div>
+			{% endfor %}
+	{% endblock %}
+	</body>
+</html>	

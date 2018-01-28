@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+<html>
+	{% block head %}
+	<head>
+		<title>Trap View</title>
+		<link href="/static/custom.css" rel="stylesheet">
+	</head>
+	{% endblock %}
+	
+	<body>
+	{% block body %}
+		
+		<div class="container">
+			<h2>Trap {{cage.id}}</h2>	
+			<div class="d-sm-flex flex-column">
+				<img src="http://10.33.33.187:8080/video" class="videoplayer"></img>
+				<button class="btn-success btn-block" onclick="buttonPresser('{{ url | safe }}/open')">Open</button>
+				<button class="btn-danger btn-block" onclick="buttonPresser('{{ url | safe }}/close')">Close</button>
+			</div>
+			
+		</div>	
+
+	<script src="/static/buttons.js"></script>
+	{% endblock %}
+	</body>
+</html>
+<!--http://10.33.33.187:8080/video-->

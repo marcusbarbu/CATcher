@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+<html style="height:100%">
+{% block head %}
+	<head>
+		<title>CAT-cher</title>
+	<link href="/static/custom.css" rel="stylesheet">
+	</head>
+{% endblock %}
+{% block body %}
+	<body style="min-height:100vh">		
+		<div class="d-sm-flex flex-column", style="min-height:100vh;">
+			<a href="/cages">
+				<div class="card front-page">
+					<div class="container" style="text-align:center;">
+						<img src="/static/emptycage.png" alt="My Cages" style="margin-left: auto; margin-right: auto; height:80%">
+						<h4>My Traps</h4>
+					</div>
+				</div>
+			</a>
+			<a href="/badges">
+				<div class="card front-page">
+					<div class="container" style="text-align:center">
+						<img src="/static/mybadges.png" alt="My Badges" style="margin-left: auto; margin-right: auto; height:80%;">
+						<h4>My Badges</h4>
+					</div>
+				</div>
+			</a>
+			<a href="/social">
+				<div class="card front-page">
+					<div class="container" style="text-align:center">
+						<img src="/static/mycommunity.png" alt="My Community" style="margin-left: auto; margin-right: auto;  height:80%">
+						<h4>My Community</h4>
+					</div>
+				</div>
+			</a>
+		 </div>	
+		
+	{% endblock %}		
+	</body>
+</html>

@@ -1,0 +1,19 @@
+.front-page{
+	height:30%;
+	background-color: transparent;
+	border-width: 0px;
+}
+.cage_cam{
+	width:100%;
+}
+
+.videoplayer{
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom:8px;
+	max-width: 100%;
+	width:93vw;
+}
+body{
+	background-color: #ff9800
+}

@@ -1,0 +1,29 @@
+<html>
+	{% extends "base.html" %}
+	{% block head %}
+	<head>
+		<title>My Traps</title>
+		<link href="/static/custom.css" rel="stylesheet">
+	</head>
+	{% endblock %}	
+
+	{% block body %}
+	<body style="min-height:100vh">		
+		<div class="d-sm-flex flex-column", style="min-height:100vh">
+			{% for cage in cages %}
+			<a href="cage/{{cage.id}}">
+				<div class="card front-page">
+					<div class="container" style="text-align:center;">
+						{% if cage.status == 0 %}
+						<img src="/static/emptycage.png" alt="Empty Cage" style="margin-left: auto; margin-right: auto; height:80%">
+						{% elif cage.status == 1 %}
+						<img src="/static/fullcage.png" alt="Full Cage" style="margin-left: auto; margin-right: auto; height:80%">
+						{% endif %}
+						<h4>Trap {{cage.id}}</h4>
+					</div>
+				</div>
+			</a>
+			{% endfor %}
+	{% endblock %}
+	</body>
+</html>	
