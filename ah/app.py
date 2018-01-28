@@ -8,12 +8,13 @@ app = Flask(__name__)
 global_awards_list = []
 with open('awards', 'r') as awards:
 	raw = awards.read()
-	global_awards_list = raw.split('\n')
+	global_awards_list = raw.split('\r\n')
+	print len(global_awards_list)
 
 def load_badges():
 	x = []
-	for i in range(100):
-		x.append({'award_category':random.choice(range(3)), 'award_text':random.choice(global_awards_list)})
+	for i in range(len(global_awards_list)):
+		x.append({'award_category':random.choice(range(3)), 'award_text':global_awards_list[i]})
 	return x
 
 def load_conversations():
